@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1076772443306",
+    "project_id": "simplechat-dviss",
+    "storage_bucket": "simplechat-dviss.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076772443306:android:304a51fda292dfcf76ecd3",
+        "android_client_info": {
+          "package_name": "com.dviss.simplechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076772443306-ijvsg3hev3bdb8vss2hta96rn46fi806.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dviss.simplechat",
+            "certificate_hash": "7bfce19cd797d0cfd8ea907c1a3ce208eed3e585"
+          }
+        },
+        {
+          "client_id": "1076772443306-iia6l53u78jtmuc7qfplkk9fpgv5h2mj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBL0Z7j52mb2IwIZwzjpJwAvT1LUD3pdE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076772443306-iia6l53u78jtmuc7qfplkk9fpgv5h2mj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
