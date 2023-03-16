@@ -7,16 +7,15 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.dviss.simplechat.ui.chat.ChatScreen
 import com.dviss.simplechat.ui.theme.SimpleChatTheme
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-
-    private val TAG = "MainActivity"
-
-    val ANONYMOUS = "anonymous"
-    val DEFAULT_MSG_LENGTH_LIMIT = 1000
-
-    private val mUsername: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    ChatScreen()
                 }
             }
         }
