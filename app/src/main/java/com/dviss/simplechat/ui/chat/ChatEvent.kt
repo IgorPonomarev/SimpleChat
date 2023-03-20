@@ -2,5 +2,7 @@ package com.dviss.simplechat.ui.chat
 
 sealed class ChatEvent{
     object OnAttachImageClick: ChatEvent()
-    data class OnSendMessageClick(val message: String): ChatEvent()
+    object OnSendMessageClick: ChatEvent()
+    object OnNewMessageAdded: ChatEvent()
+    data class OnInputTextChange(val text: String) : ChatEvent()
 }

@@ -1,5 +1,8 @@
 package com.dviss.simplechat.di
 
+import com.dviss.simplechat.usecase.AttachImage
+import com.dviss.simplechat.usecase.ChatUseCases
+import com.dviss.simplechat.usecase.SendMessage
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import dagger.Module
@@ -22,5 +25,22 @@ object AppModule {
     @Singleton
     fun provideFirebaseDatabaseReference(database: FirebaseDatabase): DatabaseReference {
         return database.reference.child("messages")
+    }
+
+//    @Provides
+//    @Singleton
+//    fun provideMessageChildEventListener(databaseReference: DatabaseReference): ChildEventListener {
+//        return MessageChildEventListener(databaseReference)
+//    }
+
+    @Provides
+    @Singleton
+    fun provideChatUseCases(
+        messagesDatabaseReference: DatabaseReference
+    ): ChatUseCases {
+        return ChatUseCases(
+            attachImage = AttachImage(messagesDatabaseReference),
+            sendMessage = SendMessage((messagesDatabaseReference))
+        )
     }
 }

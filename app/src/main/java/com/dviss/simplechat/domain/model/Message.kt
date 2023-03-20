@@ -1,4 +1,4 @@
-package com.dviss.simplechat.model
+package com.dviss.simplechat.domain.model
 
 class Message {
     var text: String? = null
